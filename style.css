@@ -1,0 +1,63 @@
+/* Reset básico e estilização do fundo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.rating-container {
+    text-align: center;
+}
+
+/* Área das estrelas */
+.stars {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem visual para o CSS funcionar da direita para a esquerda */
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Esconde as bolinhas do rádio originais */
+.stars input {
+    display: none;
+}
+
+/* Estilo padrão das estrelas (apagadas) */
+.stars label {
+    font-size: 3.5rem; /* Tamanho aproximado da imagem */
+    color: #e0e0e0; /* Cor cinza claro quando apagada */
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0 4px;
+}
+
+/* --- EFEITO MÁGICO DO HOVER E CLIQUE --- */
+
+/* Quando passa o mouse na estrela, ela e as anteriores (à esquerda) ficam amarelas */
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #f3cc14; /* Cor amarela idêntica à da foto */
+}
+
+/* Mantém as estrelas acesas após o clique */
+.stars input:checked ~ label {
+    color: #f3cc14;
+}
+
+/* Texto abaixo das estrelas */
+.rating-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #cfb033; /* Tom de amarelo escuro/dourado do texto da imagem */
+    margin-top: 10px;
+}
