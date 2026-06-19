@@ -1,6 +1,6 @@
 # Avaliação 5 Estrelas
 
-Projeto de prática de front-end que consiste em um **componente de avaliação por estrelas (star rating)**, desenvolvido com HTML, CSS e JavaScript.
+Projeto de prática de front-end que consiste em um **componente de avaliação por estrelas (star rating)**, desenvolvido com HTML, CSS.
 
 ## 📋 Sobre o projeto
 
